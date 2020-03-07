@@ -3,26 +3,26 @@
 .. _appendixes.annotations:
 
 ===========
-Annotations
+Annotatie
 ===========
 
-An annotation is a special form of syntactic metadata that can be added to
-the source code of some programming languages. While PHP has no dedicated
-language feature for annotating source code, the usage of tags such as
-``@annotation arguments`` in a documentation block has been
-established in the PHP community to annotate source code. In PHP
-documentation blocks are reflective: they can be accessed through the
-Reflection API's ``getDocComment()`` method on the function,
-class, method, and attribute level. Applications such as PHPUnit use this
-information at runtime to configure their behaviour.
+Een annotatie is een speciale vorm van syntactische metadata die kan worden 
+toegevoegd aan de broncode van sommige programmeertalen. Terwijl PHP geen 
+speciale taalfunctie heeft voor het annoteren van broncode, is het gebruik 
+van tags zoals de ``@annotation arguments`` in een documentatie blok gecreëerd
+door de PHP community om broncode te annoteren. In PHP zijn documentatie
+blokken reflecterend: ze zijn toegankelijk op functie, class, methode en 
+attributen niveau via de Reflection API's ``getDocComment()`` methode.
+Applicaties zoals PHPUnit gebruiken deze informatie tijdens runtime om hun
+gedrag te configureren. 
+
 
 .. admonition:: Note
 
-   A doc comment in PHP must start with ``/**`` and end with
-   ``*/``. Annotations in any other style of comment will be
-   ignored.
+   Een documentatie opmerking in PHP moet beginnen met ``/**`` en eindigen met
+   ``*/``. Annotaties met een andere opmerking stijl worden genegeerd.
 
-This appendix shows all the varieties of annotations supported by PHPUnit.
+Deze bijlage toont alle variaties van annotaties die ondersteund worden door PHPUnit.
 
 .. _appendixes.annotations.author:
 
