@@ -29,9 +29,8 @@ Deze bijlage toont alle variaties van annotaties die ondersteund worden door PHP
 @author
 #######
 
-The ``@author`` annotation is an alias for the
-``@group`` annotation (see :ref:`appendixes.annotations.group`) and allows to filter tests based
-on their authors.
+De ``@author`` annotatie is een alias voor de
+``@group`` annotatie (zie :ref:`appendixes.annotations.group`) en staat toe om testen te filteren gebaseerd op hun auteurs.
 
 .. _appendixes.annotations.after:
 
