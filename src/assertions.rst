@@ -458,7 +458,7 @@ assertDirectoryExists()
 
 Reports an error identified by ``$message`` if the directory specified by ``$directory`` does not exist.
 
-``assertDirectoryNotExists()`` is the inverse of this assertion and takes the same arguments.
+``assertDirectoryDoesNotExist()`` is the inverse of this assertion and takes the same arguments.
 
 .. code-block:: php
     :caption: Usage of assertDirectoryExists()
@@ -503,7 +503,7 @@ assertDirectoryIsReadable()
 
 Reports an error identified by ``$message`` if the directory specified by ``$directory`` is not a directory or is not readable.
 
-``assertDirectoryNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
+``assertDirectoryIsNotReadable()`` is the inverse of this assertion and takes the same arguments.
 
 .. code-block:: php
     :caption: Usage of assertDirectoryIsReadable()
@@ -548,7 +548,7 @@ assertDirectoryIsWritable()
 
 Reports an error identified by ``$message`` if the directory specified by ``$directory`` is not a directory or is not writable.
 
-``assertDirectoryNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
+``assertDirectoryIsNotWritable()`` is the inverse of this assertion and takes the same arguments.
 
 .. code-block:: php
     :caption: Usage of assertDirectoryIsWritable()
@@ -628,118 +628,6 @@ Reports an error identified by ``$message`` if ``$actual`` is not empty.
 
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
-
-.. _appendixes.assertions.assertEqualXMLStructure:
-
-assertEqualXMLStructure()
-#########################
-
-``assertEqualXMLStructure(DOMElement $expectedElement, DOMElement $actualElement[, boolean $checkAttributes = false, string $message = ''])``
-
-Reports an error identified by ``$message`` if the XML Structure of the DOMElement in ``$actualElement`` is not equal to the XML structure of the DOMElement in ``$expectedElement``.
-
-.. code-block:: php
-    :caption: Usage of assertEqualXMLStructure()
-    :name: appendixes.assertions.assertEqualXMLStructure.example
-
-    <?php
-    use PHPUnit\Framework\TestCase;
-
-    class EqualXMLStructureTest extends TestCase
-    {
-        public function testFailureWithDifferentNodeNames()
-        {
-            $expected = new DOMElement('foo');
-            $actual = new DOMElement('bar');
-
-            $this->assertEqualXMLStructure($expected, $actual);
-        }
-
-        public function testFailureWithDifferentNodeAttributes()
-        {
-            $expected = new DOMDocument;
-            $expected->loadXML('<foo bar="true" />');
-
-            $actual = new DOMDocument;
-            $actual->loadXML('<foo/>');
-
-            $this->assertEqualXMLStructure(
-              $expected->firstChild, $actual->firstChild, true
-            );
-        }
-
-        public function testFailureWithDifferentChildrenCount()
-        {
-            $expected = new DOMDocument;
-            $expected->loadXML('<foo><bar/><bar/><bar/></foo>');
-
-            $actual = new DOMDocument;
-            $actual->loadXML('<foo><bar/></foo>');
-
-            $this->assertEqualXMLStructure(
-              $expected->firstChild, $actual->firstChild
-            );
-        }
-
-        public function testFailureWithDifferentChildren()
-        {
-            $expected = new DOMDocument;
-            $expected->loadXML('<foo><bar/><bar/><bar/></foo>');
-
-            $actual = new DOMDocument;
-            $actual->loadXML('<foo><baz/><baz/><baz/></foo>');
-
-            $this->assertEqualXMLStructure(
-              $expected->firstChild, $actual->firstChild
-            );
-        }
-    }
-
-.. parsed-literal::
-
-    $ phpunit EqualXMLStructureTest
-    PHPUnit |version|.0 by Sebastian Bergmann and contributors.
-
-    FFFF
-
-    Time: 0 seconds, Memory: 5.75Mb
-
-    There were 4 failures:
-
-    1) EqualXMLStructureTest::testFailureWithDifferentNodeNames
-    Failed asserting that two strings are equal.
-    --- Expected
-    +++ Actual
-    @@ @@
-    -'foo'
-    +'bar'
-
-    /home/sb/EqualXMLStructureTest.php:9
-
-    2) EqualXMLStructureTest::testFailureWithDifferentNodeAttributes
-    Number of attributes on node "foo" does not match
-    Failed asserting that 0 matches expected 1.
-
-    /home/sb/EqualXMLStructureTest.php:22
-
-    3) EqualXMLStructureTest::testFailureWithDifferentChildrenCount
-    Number of child nodes of "foo" differs
-    Failed asserting that 1 matches expected 3.
-
-    /home/sb/EqualXMLStructureTest.php:35
-
-    4) EqualXMLStructureTest::testFailureWithDifferentChildren
-    Failed asserting that two strings are equal.
-    --- Expected
-    +++ Actual
-    @@ @@
-    -'bar'
-    +'baz'
-
-    /home/sb/EqualXMLStructureTest.php:48
-
-    FAILURES!
-    Tests: 4, Assertions: 8, Failures: 4.
 
 .. _appendixes.assertions.assertEquals:
 
@@ -1235,7 +1123,7 @@ assertFileExists()
 
 Reports an error identified by ``$message`` if the file specified by ``$filename`` does not exist.
 
-``assertFileNotExists()`` is the inverse of this assertion and takes the same arguments.
+``assertFileDoesNotExist()`` is the inverse of this assertion and takes the same arguments.
 
 .. code-block:: php
     :caption: Usage of assertFileExists()
@@ -1280,7 +1168,7 @@ assertFileIsReadable()
 
 Reports an error identified by ``$message`` if the file specified by ``$filename`` is not a file or is not readable.
 
-``assertFileNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
+``assertFileIsNotReadable()`` is the inverse of this assertion and takes the same arguments.
 
 .. code-block:: php
     :caption: Usage of assertFileIsReadable()
@@ -1325,7 +1213,7 @@ assertFileIsWritable()
 
 Reports an error identified by ``$message`` if the file specified by ``$filename`` is not a file or is not writable.
 
-``assertFileNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
+``assertFileIsNotWritable()`` is the inverse of this assertion and takes the same arguments.
 
 .. code-block:: php
     :caption: Usage of assertFileIsWritable()
@@ -2022,7 +1910,7 @@ assertIsReadable()
 
 Reports an error identified by ``$message`` if the file or directory specified by ``$filename`` is not readable.
 
-``assertNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
+``assertIsNotReadable()`` is the inverse of this assertion and takes the same arguments.
 
 .. code-block:: php
     :caption: Usage of assertIsReadable()
@@ -2068,7 +1956,7 @@ assertIsWritable()
 
 Reports an error identified by ``$message`` if the file or directory specified by ``$filename`` is not writable.
 
-``assertNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
+``assertIsNotWritable()`` is the inverse of this assertion and takes the same arguments.
 
 .. code-block:: php
     :caption: Usage of assertIsWritable()
@@ -2477,20 +2365,20 @@ Reports an error identified by ``$message`` if ``$object->attributeName`` does n
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
-.. _appendixes.assertions.assertRegExp:
+.. _appendixes.assertions.assertMatchesRegularExpression:
 
-assertRegExp()
+assertMatchesRegularExpression()
 ##############
 
-``assertRegExp(string $pattern, string $string[, string $message = ''])``
+``assertMatchesRegularExpression(string $pattern, string $string[, string $message = ''])``
 
 Reports an error identified by ``$message`` if ``$string`` does not match the regular expression ``$pattern``.
 
-``assertNotRegExp()`` is the inverse of this assertion and takes the same arguments.
+``assertDoesNotMatchRegularExpression()`` is the inverse of this assertion and takes the same arguments.
 
 .. code-block:: php
-    :caption: Usage of assertRegExp()
-    :name: appendixes.assertions.assertRegExp.example
+    :caption: Usage of assertMatchesRegularExpression()
+    :name: appendixes.assertions.assertMatchesRegularExpression.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2499,7 +2387,7 @@ Reports an error identified by ``$message`` if ``$string`` does not match the re
     {
         public function testFailure()
         {
-            $this->assertRegExp('/foo/', 'bar');
+            $this->assertMatchesRegularExpression('/foo/', 'bar');
         }
     }
     ?>
