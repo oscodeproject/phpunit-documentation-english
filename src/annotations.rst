@@ -37,8 +37,7 @@ De ``@author`` annotatie is een alias voor de
 @after
 ######
 
-The ``@after`` annotation can be used to specify methods
-that should be called after each test method in a test case class.
+De ``@after`` annotatie kan worden toegepast voor het specificeren van methodes die aangeroepen dienen te worden na iedere test methode in een test case class.
 
 .. code-block:: php
 
@@ -68,9 +67,7 @@ that should be called after each test method in a test case class.
 @afterClass
 ###########
 
-The ``@afterClass`` annotation can be used to specify
-static methods that should be called after all test methods in a test
-class have been run to clean up shared fixtures.
+De ``@afterClass`` annotatie kan worden toegepast voor het specificeren van static methodes die aangeroepen dienen te worden nadat alle test methodes in een test class zijn uitgevoerd om de gedeelde fixtures op te ruimen.
 
 .. code-block:: php
 
