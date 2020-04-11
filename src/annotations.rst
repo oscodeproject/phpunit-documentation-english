@@ -97,9 +97,9 @@ De ``@afterClass`` annotatie kan worden toegepast voor het specificeren van stat
 @backupGlobals
 ##############
 
-PHPUnit can optionally backup all global and super-global variables before each test and restore this backup after each test.
+PHPUnit kan optioneel backup alle globale en super-globale variabele voor iedere test en deze backup terugplaatsen na iedere test.
 
-The ``@backupGlobals enabled`` annotation can be used on the class level to enable this operation for all tests of a test case class:
+De ``@backupGlobals enabled`` annotatie kan worden toegepast op class niveau om deze actie te activeren voor alle testen van een test case class:
 
 .. code-block:: php
 
@@ -113,9 +113,7 @@ The ``@backupGlobals enabled`` annotation can be used on the class level to enab
         // ...
     }
 
-The ``@backupGlobals`` annotation can also be used on the
-test method level. This allows for a fine-grained configuration of the
-backup and restore operations:
+De ``@backupGlobals`` annotatie kan ook worden gebruikt op test methode niveau. Dit maakt verfijnde configuraties mogelijk voor de backup en terugplaats acties:
 
 .. code-block:: php
 
