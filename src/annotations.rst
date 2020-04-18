@@ -195,8 +195,7 @@ De ``@backupStaticAttributes`` annotatie kan ook worden toegepast op test method
 @before
 #######
 
-The ``@before`` annotation can be used to specify methods
-that should be called before each test method in a test case class.
+De ``@before`` annotatie kan worden toegepast om methodes te specificeren die aangeroepen dienen te worden voor iedere test methode in een test case class.
 
 .. code-block:: php
 
@@ -226,9 +225,7 @@ that should be called before each test method in a test case class.
 @beforeClass
 ############
 
-The ``@beforeClass`` annotation can be used to specify
-static methods that should be called before any test methods in a test
-class are run to set up shared fixtures.
+De ``@beforeClass`` annotatie kan worden toegepast om static methodes te specificeren die aangeroepen dienen te worden voor iedere test methoden in een test class om gedeelde fixtures op te zetten.
 
 .. code-block:: php
 
