@@ -143,9 +143,9 @@ De ``@backupGlobals`` annotatie kan ook worden gebruikt op test methode niveau. 
 @backupStaticAttributes
 #######################
 
-PHPUnit can optionally backup all static attributes in all declared classes before each test and restore this backup after each test.
+PHPUnit kan optioneel backup alle static attributen in alle gedeclareerde classes voor iedere test en de backup terugplaatsen na iedere test.
 
-The ``@backupStaticAttributes enabled`` annotation can be used on the class level to enable this operation for all tests of a test case class:
+De ``@backupStaticAttributes enabled`` annotatie kan worden gebruikt op class niveau om deze actie te activeren voor alle testen van een test case class:
 
 .. code-block:: php
 
@@ -159,9 +159,7 @@ The ``@backupStaticAttributes enabled`` annotation can be used on the class leve
         // ...
     }
 
-The ``@backupStaticAttributes`` annotation can also be used on the
-test method level. This allows for a fine-grained configuration of the
-backup and restore operations:
+De ``@backupStaticAttributes`` annotatie kan ook worden toegepast op test methode niveau. Dit maakt verfijnde configuratie mogelijk voor de backup en terugplaats acties:
 
 .. code-block:: php
 
@@ -188,11 +186,9 @@ backup and restore operations:
 
 .. admonition:: Note
 
-   ``@backupStaticAttributes`` is limited by PHP internals
-   and may cause unintended static values to persist and leak into
-   subsequent tests in some circumstances.
+   ``@backupStaticAttributes`` is gelimiteerd door PHP internals en er      kunnen mogelijk niet bedoelde static waarden aangehouden en              doorgegeven worden aan opvolgende testen in sommige situaties.
 
-   See :ref:`fixtures.global-state` for details.
+   Zie :ref:`fixtures.global-state` voor details.
 
 .. _appendixes.annotations.before:
 
