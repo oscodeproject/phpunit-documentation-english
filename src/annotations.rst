@@ -255,20 +255,19 @@ De ``@beforeClass`` annotatie kan worden toegepast om static methodes te specifi
 @codeCoverageIgnore*
 ####################
 
-The ``@codeCoverageIgnore``,
-``@codeCoverageIgnoreStart`` and
-``@codeCoverageIgnoreEnd`` annotations can be used
-to exclude lines of code from the coverage analysis.
+De ``@codeCoverageIgnore``,
+``@codeCoverageIgnoreStart`` en
+``@codeCoverageIgnoreEnd`` annotaties kunnen worden gebruikt voor het excluden van code regels uit de dekking 
+analyses.
 
-For usage see :ref:`code-coverage-analysis.ignoring-code-blocks`.
+Voor gebruik zie :ref:`code-coverage-analysis.ignoring-code-blocks`.
 
 .. _appendixes.annotations.covers:
 
 @covers
 #######
 
-The ``@covers`` annotation can be used in the test code to
-specify which parts of the code it is supposed to test:
+De ``@covers`` annotatie kan worden gebruikt in de test code om te specificeren welke delen van de code het dient te testen:
 
 .. code-block:: php
 
@@ -280,58 +279,48 @@ specify which parts of the code it is supposed to test:
         $this->assertSame(0, $this->ba->getBalance());
     }
 
-If provided, this effectively filters the code coverage report
-to include executed code from the referenced code parts only.
-This will make sure that code is only marked as covered if there
-are dedicated tests for it, but not if it used indirectly by the
-tests for a different class, thus avoiding false positives for code
-coverage.
+Indien aanwezig dan wordt de code dekking rapport effectief gefilterd om van de uitgevoerde code alleen de gerefereerde code delen toe te voegen. Dit zorgt ervoor dat code alleen als gedekt gemarkeerd worden als er toegewijde testen voor zijn, maar niet als het indirect wordt gebruikt door testen van een andere class, wat valse positieve van code dekking voorkomt.
 
-This annotation can be added to the docblock of the test class or the individual
-test methods. The recommended way is to add the annotation to the docblock
-of the test class, not to the docblock of the test methods.
+Deze annotatie kan worden toegevoegd aan de docblock van een test class of individuele test methodes. De aanbevolen manier is om de annotatie toe te voegen aan de docblock van een test class en niet aan de docblock van de test methodes.
 
-When the ``forceCoversAnnotation`` configuration option in the
-:ref:`configuration file <appendixes.configuration>` is set to ``true``,
-every test method needs to have an associated ``@covers`` annotation
-(either on the test class or the individual test method).
+Als de ``forceCoversAnnotation`` configuratie optie in de
+:ref:`configuration file <appendixes.configuration>` is gezet op ``true``, dan dient iedere test methode een associatie te hebben met  ``@covers`` annotatie 
+(oftewel op de test class of de individuele test methode).
 
-:numref:`appendixes.annotations.covers.tables.annotations` shows
-the syntax of the ``@covers`` annotation.
-The section :ref:`code-coverage-analysis.specifying-covered-parts`
-provides longer examples for using the annotation.
+:numref:`appendixes.annotations.covers.tables.annotations` toont de syntax van de ``@covers`` annotatie.
+De sectie :ref:`code-coverage-analysis.specifying-covered-parts`
+geeft grotere voorbeelden voor het gebruik van de annotatie.
 
-Please note that this annotation requires a fully-qualified class name (FQCN).
-To make this more obvious to the reader, it is recommended to use a leading
-backslash (even if this not required for the annotation to work correctly).
+Let op, deze annotatie vereist een fully-qualified class name (FQCN).
+Om dit duidelijker te maken aan de lezer is het aanbevolen om leading backslash te gebruiken (ook al is het niet vereist voor het correct werken van de annotatie).
 
 .. rst-class:: table
-.. list-table:: Annotations for specifying which methods are covered by a test
+.. list-table:: Annotaties voor het specificeren welke methodes gedekt zijn met een test.
     :name: appendixes.annotations.covers.tables.annotations
     :header-rows: 1
 
-    * - Annotation
-      - Description
-    * - ``@covers ClassName::methodName`` (not recommended)
-      - Specifies that the annotated test method covers the specified method.
-    * - ``@covers ClassName`` (recommended)
-      - Specifies that the annotated test method covers all methods of a given class.
-    * - ``@covers ClassName<extended>`` (not recommended)
-      - Specifies that the annotated test method covers all methods of a given class and its parent class(es).
-    * - ``@covers ClassName::<public>`` (not recommended)
-      - Specifies that the annotated test method covers all public methods of a given class.
-    * - ``@covers ClassName::<protected>`` (not recommended)
-      - Specifies that the annotated test method covers all protected methods of a given class.
-    * - ``@covers ClassName::<private>`` (not recommended)
-      - Specifies that the annotated test method covers all private methods of a given class.
-    * - ``@covers ClassName::<!public>`` (not recommended)
-      - Specifies that the annotated test method covers all methods of a given class that are not public.
-    * - ``@covers ClassName::<!protected>`` (not recommended)
-      - Specifies that the annotated test method covers all methods of a given class that are not protected.
-    * - ``@covers ClassName::<!private>`` (not recommended)
-      - Specifies that the annotated test method covers all methods of a given class that are not private.
-    * - ``@covers ::functionName`` (recommended)
-      - Specifies that the annotated test method covers the specified global function.
+    * - Annotatie
+      - Omschrijving
+    * - ``@covers ClassName::methodName`` (niet aanbevolen)
+      - Specificeert dat de annotated test methode de specifieke methode dekt.
+    * - ``@covers ClassName`` (aanbevolen)
+      - Specificeert dat de annotated test methode alle methodes van een gegeven class dekt.
+    * - ``@covers ClassName<extended>`` (niet aanbevolen)
+      - Specificeert dat de annotated test methode alle methoden van gegeven class en zijn parent class(es) dekt.
+    * - ``@covers ClassName::<public>`` (niet aanbevolen)
+      - Specificeert dat de annotated test methode alle public methodes van een gegeven class dekt.
+    * - ``@covers ClassName::<protected>`` (niet aanbevolen)
+      - Specificeert dat de annotated test methode alle protected methodes van een gegeven class dekt.
+    * - ``@covers ClassName::<private>`` (niet aanbevolen)
+      - Specificeert dat de annotated test methode calle private methodes van een gegeven class dekt.
+    * - ``@covers ClassName::<!public>`` (niet aanbevolen)
+      - Specificeert dat de annotated test methode alle methoden die niet public zijn van een gegeven class dekt.
+    * - ``@covers ClassName::<!protected>`` (niet aanbevolen)
+      - Specificeert dat de annotated test methode alle methoden die niet protected zijn van een gegeven class dekt.
+    * - ``@covers ClassName::<!private>`` (niet aanbevolen)
+      - Specificeert dat de annotated test methode alle methoden die niet private zijn van een gegeven class dekt.
+    * - ``@covers ::functionName`` (aanbevolen)
+      - Specificeert dat de annotated test methode de gespecificeerde globale functie dekt.
 
 .. _appendixes.annotations.coversDefaultClass:
 
