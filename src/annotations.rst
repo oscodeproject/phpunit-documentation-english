@@ -327,14 +327,12 @@ Om dit duidelijker te maken aan de lezer is het aanbevolen om leading backslash 
 @coversDefaultClass
 ###################
 
-The ``@coversDefaultClass`` annotation can be used to
-specify a default namespace or class name. That way long names don't need to be
-repeated for every ``@covers`` annotation. See
+De ``@coversDefaultClass`` annotatie kan worden gebruikt om een default namespace of class naam te specificeren. Hierdoor hoeven lange namen niet herhaald te worden voor iedere ``@covers`` annotatie. Zie 
 :numref:`appendixes.annotations.examples.CoversDefaultClassTest.php`.
 
-Please note that this annotation requires a fully-qualified class name (FQCN).
-To make this more obvious to the reader, it is recommended to use a leading
-backslash (even if this not required for the annotation to work correctly).
+Let op, deze annotatie vereist een fully-qualified class name (FQCN).
+Om dit duidelijker te maken aan de lezer is het aanbevolen om leading
+backslash te gebruiken (ook al is het niet vereist voor het correct werken van de annotatie).
 
 .. code-block:: php
     :caption: Using @coversDefaultClass to shorten annotations
@@ -363,16 +361,14 @@ backslash (even if this not required for the annotation to work correctly).
 @coversNothing
 ##############
 
-The ``@coversNothing`` annotation can be used in the
-test code to specify that no code coverage information will be
-recorded for the annotated test case.
+De ``@coversNothing`` annotatie kan worden gebruikt in de test code om te specificeren dat er geen code dekking informatie zal worden opgenomen voor de 
+annotated test case.
 
-This can be used for integration testing. See
+Dit kan worden gebruikt voor integratie testen. Zie 
 :ref:`code-coverage-analysis.specifying-covered-parts.examples.GuestbookIntegrationTest.php`
-for an example.
+voor een voorbeeld.
 
-The annotation can be used on the class and the method level and
-will override any ``@covers`` tags.
+De annotatie kan worden gebruikt op class en methode niveau en overschrijft iedere ``@covers`` tags.
 
 .. _appendixes.annotations.dataProvider:
 
