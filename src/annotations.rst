@@ -375,14 +375,12 @@ De annotatie kan worden gebruikt op class en methode niveau en overschrijft iede
 @dataProvider
 #############
 
-A test method can accept arbitrary arguments. These arguments are to be
-provided by one or more data provider methods (``provider()`` in
+Een test methode kan arbitrary argumenten accepteren. Deze argumenten dienen te worden geleverd door een of meerdere data provider methodes (``provider()`` in
 :ref:`writing-tests-for-phpunit.data-providers.examples.DataTest.php`).
-The data provider method to be used is specified using the
-``@dataProvider`` annotation.
+De data provider methode die gebruikt dient te worden, word gespecificeerd door gebruik te maken van de
+``@dataProvider`` annotatie.
 
-See :ref:`writing-tests-for-phpunit.data-providers` for more
-details.
+Zie :ref:`writing-tests-for-phpunit.data-providers` voor meer informatie.
 
 .. _appendixes.annotations.depends:
 
