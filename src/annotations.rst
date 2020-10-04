@@ -455,14 +455,14 @@ respectieve richtlijnen van de XML configuratie bestand.
 @large
 ######
 
-The ``@large`` annotation is an alias for
-``@group large``.
+De ``@large`` annotatie is een alias voor
+``@group large``..
 
-If the ``PHP_Invoker`` package is installed and strict
-mode is enabled, a large test will fail if it takes longer than 60
-seconds to execute. This timeout is configurable via the
-``timeoutForLargeTests`` attribute in the XML
-configuration file.
+Als de ``PHP_Invoker`` package is geinstaleerd en strict
+mode is enabled, dan zal een grote test falen als de uitvoering 
+langer dan 60 seconden duurt. Deze timeout is instelbaar via de
+``timeoutForLargeTests`` attribuut in de XML
+configuratie bestand.
 
 .. _appendixes.annotations.medium:
 
