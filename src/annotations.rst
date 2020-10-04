@@ -416,8 +416,8 @@ Voorkomt dat een test die geen assertions uitvoerd als riskant word gezien.
 @group
 ######
 
-A test can be tagged as belonging to one or more groups using the
-``@group`` annotation like this
+Een test kan worden gelabeld dat het behoort tot een of meerdere groepen door de
+``@group`` annotatie als volgt te gebruiken
 
 .. code-block:: php
 
@@ -442,13 +442,13 @@ A test can be tagged as belonging to one or more groups using the
         }
     }
 
-The ``@group`` annotation can also be provided for the test
-class. It is then "inherited" to all test methods of that test class.
+De ``@group`` annotatie kan ook worden toegepast op de test class.
+Het is dan "inherited" door alle test methodes van die test class.
 
-Tests can be selected for execution based on groups using the
-``--group`` and ``--exclude-group`` options
-of the command-line test runner or using the respective directives of the
-XML configuration file.
+Testen kunnen geselecteerd worden voor uitvoering gebaseerd op 
+groepen door gebruik te maken van de ``--group`` en ``--exclude-group`` 
+opties van de command-line test runner of met gebruikmaking van de 
+respectieve richtlijnen van de XML configuratie bestand.
 
 .. _appendixes.annotations.large:
 
