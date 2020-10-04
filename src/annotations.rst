@@ -484,13 +484,13 @@ configuratie bestand.
 @preserveGlobalState
 ####################
 
-When a test is run in a separate process, PHPUnit will
-attempt to preserve the global state from the parent process by
-serializing all globals in the parent process and unserializing them
-in the child process. This can cause problems if the parent process
-contains globals that are not serializable. To fix this, you can prevent
-PHPUnit from preserving global state with the
-``@preserveGlobalState`` annotation.
+Wanneer een test wordt uitgevoerd in een apart proces, PHPUnit 
+zal proberen de global state van een parent proces te behouden
+door serializing alle globalen in de parent proces en ze te 
+unserializing in de child proces. Dit kan problemen veroorzaken 
+als de parent proces globalen heeft die niet geserialiseerd kunnen 
+worden. Om dit op te lossen, kun je voorkomen dat PHPUnit de 
+global state behoud met de ``@preserveGlobalState`` annotatie.
 
 .. code-block:: php
 
