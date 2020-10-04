@@ -394,16 +394,15 @@ Zie :ref:`writing-tests-for-phpunit.data-providers` voor meer informatie.
 @depends
 ########
 
-PHPUnit supports the declaration of explicit dependencies between test
-methods. Such dependencies do not define the order in which the test
-methods are to be executed but they allow the returning of an instance of
-the test fixture by a producer and passing it to the dependent consumers.
-:ref:`writing-tests-for-phpunit.examples.StackTest2.php` shows
-how to use the ``@depends`` annotation to express
-dependencies between test methods.
+PHPUnit ondersteund de declaratie van explicit dependencies tussen test 
+methodes. Zulke dependencies definieren niet de volgorde van de uitvoering 
+van de test methodes maar staan de terugkeer van een instantie van een test 
+fixture van een maker en het doorgeven naar de afhankelijke gebruikers toe.
+:ref:`writing-tests-for-phpunit.examples.StackTest2.php` toont hoe de 
+``@depends`` annotatie gebruikt kan worden om de dependencies tussen test 
+methodes aan te geven.
 
-See :ref:`writing-tests-for-phpunit.test-dependencies` for more
-details.
+Zie :ref:`writing-tests-for-phpunit.test-dependencies` voor meer informatie.
 
 .. _appendixes.annotations.doesNotPerformAssertions:
 
