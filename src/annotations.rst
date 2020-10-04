@@ -469,15 +469,15 @@ configuratie bestand.
 @medium
 #######
 
-The ``@medium`` annotation is an alias for
-``@group medium``. A medium test must not depend on a test
-marked as ``@large``.
+De ``@medium`` annotatie is een alias voor ``@group medium``. 
+Een medium test moet niet afhankelijk zijn van een test die 
+gemarkeerd is als ``@large``.
 
-If the ``PHP_Invoker`` package is installed and strict
-mode is enabled, a medium test will fail if it takes longer than 10
-seconds to execute. This timeout is configurable via the
-``timeoutForMediumTests`` attribute in the XML
-configuration file.
+Als de ``PHP_Invoker`` package is geinstaleerd en strict
+mode is enabled, dan zal een medium test falen als de uitvoering 
+langer dan 10 seconden duurt. Deze timeout is instelbaar via de 
+``timeoutForMediumTests`` attribuut in de XML
+configuratie bestand.
 
 .. _appendixes.annotations.preserveGlobalState:
 
