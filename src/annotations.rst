@@ -409,7 +409,7 @@ Zie :ref:`writing-tests-for-phpunit.test-dependencies` voor meer informatie.
 @doesNotPerformAssertions
 #########################
 
-Prevents a test that performs no assertions from being considered risky.
+Voorkomt dat een test die geen assertions uitvoerd als riskant word gezien.
 
 .. _appendixes.annotations.group:
 
